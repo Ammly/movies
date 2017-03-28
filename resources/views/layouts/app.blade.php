@@ -10,7 +10,7 @@
 
         <title>@if (trim($__env->yieldContent('template_title')))@yield('template_title') | @endif {{ config('app.name', Lang::get('titles.app')) }}</title>
         <meta name="description" content="">
-        <meta name="author" content="Jeremy Kenedy">
+        <meta name="author" content="Ammly">
         <link rel="shortcut icon" href="/favicon.ico">
 
         {{-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --}}
@@ -24,6 +24,8 @@
 
         {{-- Styles --}}
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+
+        <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
 
         @yield('template_linked_css')
 
@@ -49,7 +51,7 @@
     <body>
         <div id="app">
 
-            @include('partials.nav')
+            @include('partials.landing-nav')
 
             <div class="container">
 

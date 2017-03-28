@@ -1,99 +1,178 @@
-<!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.landing')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+<div class="container">
+    <div class="container_wrap">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+        @include('partials.landing-nav')
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .title small {
-                font-size: 60px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
+        <div class="slider">
+           <div class="callbacks_container">
+              <ul class="rslides" id="slider">
+                <li><img src="images/banner.jpg" class="img-responsive" alt="" style="height: 50%;" />
+                    <div class="button">
+                      <a href="{{ route('movie') }}" class="hvr-shutter-out-horizontal">Watch Now</a>
+                    </div>
+                </li>
+                <li><img src="images/banner1.jpg" class="img-responsive" alt=""/>
+                    <div class="button">
+                      <a href="{{ route('movie') }}" class="hvr-shutter-out-horizontal">Watch Now</a>
+                    </div>
+                </li>
+                <li><img src="images/banner2.jpg" class="img-responsive" alt=""/>
+                    <div class="button">
+                      <a href="{{ route('movie') }}" class="hvr-shutter-out-horizontal">Watch Now</a>
+                    </div>
+                </li>
+              </ul>
+            </div>
+            <div class="banner_desc">
+                <div class="col-md-9">
+                    <ul class="list_1">
+                        <li>Published <span class="m_1">Feb 20, 2015</span></li>
+                        <li>Updated <span class="m_1">Feb 20 2015</span></li>
+                        <li>Rating <span class="m_1"><img src="images/rating.png" alt=""/></span></li>
+                    </ul>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel<br /><small>Auth 2.0</small>
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="col-md-3 grid_1">
+                    <ul class="list_1 list_2">
+                        <li><i class="icon1"> </i><p>2,548</p></li>
+                        <li><i class="icon2"> </i><p>215</p></li>
+                        <li><i class="icon3"> </i><p>546</p></li>
+                    </ul>
                 </div>
             </div>
+      </div>
+      <div class="content">
+        <div class="box_1">
+         <h1 class="m_2">Featurd Movies</h1>
+         <div class="search">
+            <form>
+                <input type="text" value="Search..." onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+                <input type="submit" value="">
+            </form>
         </div>
-    </body>
-</html>
+        <div class="clearfix"> </div>
+        </div>
+        <div class="box_2">
+            <div class="col-md-5 grid_3">
+              <div class="row_1">
+              <div class="col-md-6 grid_4"><a href="{{route('movie')}}">
+                  <div class="grid_2">
+                    <img src="images/pic1.jpg" class="img-responsive" alt=""/>
+                    <div class="caption1">
+                        <ul class="list_3">
+                            <li><i class="icon5"> </i><p>3,548</p></li>
+                        </ul>
+                        <i class="icon4"> </i>
+                        <p class="m_3">Guardians of the Galaxy</p>
+                    </div>
+                   </div>
+                   <div class="grid_2 col_1">
+                    <img src="images/pic2.jpg" class="img-responsive" alt=""/>
+                    <div class="caption1">
+                        <ul class="list_3">
+                            <li><i class="icon5"> </i><p>3,548</p></li>
+                        </ul>
+                        <i class="icon4"> </i>
+                        <p class="m_3">Guardians of the Galaxy</p>
+                    </div>
+                   </div>
+               </a></div>
+               <div class="col-md-6 grid_7">
+                   <div class="col_2">
+                        <ul class="list_4">
+                            <li><i class="icon1"> </i><p>2,548</p></li>
+                            <li><i class="icon2"> </i><p>215</p></li>
+                            <li><i class="icon3"> </i><p>546</p></li>
+                            <li>Rating : &nbsp;&nbsp;<p><img src="images/rating1.png" alt=""/></p></li>
+                            <li>Release Date : &nbsp;<span class="m_4">Mar 15, 2015</span> </li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                        <div class="m_5"><a href="{{route('movie')}}"><img src="images/pic3.jpg" class="img-responsive" alt=""/></a></div>
+                   </div>
+             </div>
+               <div class="clearfix"> </div>
+               </div>
+               <div class="row_2">
+                <a href="{{route('movie')}}"><img src="images/pic4.jpg" class="img-responsive" alt=""/></a>
+               </div>
+            </div>
+            <div class="col-md-5 content_right">
+             <div class="row_3">
+              <div class="col-md-6 content_right-box"><a href="{{route('movie')}}">
+                <div class="grid_2">
+                <img src="images/pic6.jpg" class="img-responsive" alt=""/>
+                <div class="caption1">
+                        <ul class="list_5">
+                            <li><i class="icon5"> </i><p>3,548</p></li>
+                        </ul>
+                        <i class="icon4 icon6"> </i>
+                        <p class="m_3">Guardians of the Galaxy</p>
+                </div>
+                </div>
+               </a></div>
+               <div class="col-md-6 grid_5"><a href="{{route('movie')}}">
+                <div class="grid_2">
+                <img src="images/pic7.jpg" class="img-responsive" alt=""/>
+                <div class="caption1">
+                        <ul class="list_5">
+                            <li><i class="icon5"> </i><p>3,548</p></li>
+                        </ul>
+                        <i class="icon4 icon6"> </i>
+                        <p class="m_3">Guardians of the Galaxy</p>
+                </div>
+                </div>
+               </a></div>
+               <div class="clearfix"> </div>
+               </div>
+               <div class="video">
+                  <iframe width="100%" height="" src="https://www.youtube.com/embed/s1QeoSedWmM" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <div class="row_5">
+                <div class="col-md-6">
+                    <div class="col_2">
+                        <ul class="list_4">
+                            <li><i class="icon1"> </i><p>2,548</p></li>
+                            <li><i class="icon2"> </i><p>215</p></li>
+                            <li><i class="icon3"> </i><p>546</p></li>
+                            <li>Rating : &nbsp;&nbsp;<p><img src="images/rating1.png" alt=""></p></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                        
+                   </div>
+               </div>
+               <div class="col-md-6 m_6"><a href="{{route('movie')}}">
+                  <img src="images/pic8.jpg" class="img-responsive" alt=""/>
+               </a></div>
+              </div>
+            </div>
+            <div class="col-md-2 grid_6">
+                <div class="m_7"><a href="{{route('movie')}}"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a></div>
+                <div class="caption1">
+                        <ul class="list_5">
+                            <li><i class="icon5"> </i><p>3,548</p></li>
+                        </ul>
+                        <i class="icon4 icon6"> </i>
+                        <p class="m_3">Guardians of the Galaxy</p>
+                </div>
+                <div class="col_2 col_3">
+                        <ul class="list_4">
+                            <li><i class="icon1"> </i><p>2,548</p></li>
+                            <li><i class="icon2"> </i><p>215</p></li>
+                            <li><i class="icon3"> </i><p>546</p></li>
+                            <li>Rating : &nbsp;&nbsp;<p><img src="images/rating1.png" alt=""></p></li>
+                            <li>Release : &nbsp;<span class="m_4">Mar 15, 2015</span> </li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                        <div class="m_8"><a href="{{route('movie')}}"><img src="images/pic10.jpg" class="img-responsive" alt=""/></a></div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+      </div>
+   </div>
+ </div>
+
+ @endsection

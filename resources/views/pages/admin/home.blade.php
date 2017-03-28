@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
 
-                @include('panels.welcome-panel')
+                @include('panels.add-movie')
 
             </div>
         </div>

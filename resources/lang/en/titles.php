@@ -2,8 +2,8 @@
 
 return [
 
-	'app'			=> 'Laravel',
-	'app2'			=> 'Laravel Auth 2.0',
+	'app'			=> 'Zim Movies',
+	'app2'			=> 'Zim Movies Auth 2.0',
 	'home'			=> 'Home',
 	'login'			=> 'Login',
 	'logout'		=> 'Logout',

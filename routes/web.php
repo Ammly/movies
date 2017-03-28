@@ -1,20 +1,10 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-| Middleware options can be located in `app/Http/Kernel.php`
-|
-*/
-
 // Homepage Route
 Route::get('/', 'WelcomeController@welcome')->name('welcome');
+Route::get('/single/{movie}', 'MovieController@show')->name('single');
+Route::get('/movie', 'MovieController@index')->name('movie');
+Route::post('/movie', 'MovieController@store')->name('movie');
 
 // Authentication Routes
 Auth::routes();

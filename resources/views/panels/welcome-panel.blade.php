@@ -10,7 +10,7 @@
 @endphp
 
 
-<div class="panel panel-primary @role('admin', true) panel-info  @endrole">
+<div class="panel panel-primary @role('admin', true) panel-default  @endrole">
     <div class="panel-heading">
 
         Welcome {{ Auth::user()->name }}
